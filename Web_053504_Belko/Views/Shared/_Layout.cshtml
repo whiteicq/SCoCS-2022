@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Web_053504_Belko</title>
@@ -8,42 +10,65 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Web_053504_Belko</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
+        <!-- Панель навигации -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <!-- меню сайта -->
+            <a class="navbar-brand" href="#">WebLabsV06</a>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Лб 1</a>
+                <a class="nav-item nav-link" href="#">Каталог</a>
+                <a class="nav-item nav-link" href="#">Администрирование</a>
+            </div>
+            <!-- меню сайта - конец -->
+            <!-- Информация пользователя -->
+            <a href="#" class="navbar-text ml-auto">
+                00,0 руб <i class="fas fa-shopping-cart nav-color"></i>
+            </a>
+            <div class="dropdown ml-4 nav-color">
+                <div class="dropdown-toggle" id="dropdownMenuButton"
+                     data-toggle="dropdown" aria-haspopup="true"
+                     aria-expanded="false">
+                    <img src="Images/Avatar.png" width="30"
+                         alt="User" class="rounded" />
+                </div>
+                <div class="dropdown-menu"
+                     aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-item-text">
+                        <img src="Images/Avatar.png" width="50"
+                             alt="User" class="rounded" />
+                        user@mail.ru
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Мои товары</a>
+                    <a class="dropdown-item" href="#">Log off</a>
                 </div>
             </div>
-        </nav>
+            <!-- Информация пользователя - конец -->
+        </nav> <!-- Панель навигации - конец -->
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Web_053504_Belko - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <main class="container">
+        @RenderBody()
+    </main>
+    <footer>
+        <div class="navbar navbar-dark navbar-expand-md bg-dark">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="http://www.facebook.com">
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.vk.com">
+                    <i class="fab fa-vk fa-2x"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.twitter.com">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>
