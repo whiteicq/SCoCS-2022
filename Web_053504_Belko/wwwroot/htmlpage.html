@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="lib/font-awesome/css/all.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <!-- Панель навигации -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <!-- меню сайта -->
+            <a class="navbar-brand" href="#">WebLabsV06</a>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Лб 1</a>
+                <a class="nav-item nav-link" href="#">Каталог</a>
+                <a class="nav-item nav-link" href="#">Администрирование</a>
+            </div>
+            <!-- меню сайта - конец -->
+            <!-- Информация пользователя -->
+            <a href="#" class="navbar-text ml-auto">
+                00,0 руб <i class="fas fa-shopping-cart nav-color"></i> 
+            </a>
+            <div class="dropdown ml-4 nav-color">
+                <div class="dropdown-toggle" id="dropdownMenuButton"
+                     data-toggle="dropdown" aria-haspopup="true"
+                     aria-expanded="false">
+                    <img src="Images/Avatar.png" width="30"
+                         alt="User" class="rounded" />
+                </div>
+                <div class="dropdown-menu"
+                     aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-item-text">
+                        <img src="Images/Avatar.png" width="50"
+                             alt="User" class="rounded" />
+                        user@mail.ru
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Мои товары</a>
+                    <a class="dropdown-item" href="#">Log off</a>
+                </div>
+            </div>
+            <!-- Информация пользователя - конец -->
+        </nav> <!-- Панель навигации - конец -->
+    </header>
+    <main class="container">
+            <div class="container">
+                <h1>Лабораторная работа 1</h1>
+                <div class="main-list mb-3">
+                    <h2>Список</h2>
+                    <ol type="A">
+                        <li>элемент 1 списка</li>
+                        <li>элемент 2 списка</li>
+                    </ol>
+                </div>
+                <div>
+                    <h2>Форма</h2>
+                    <form action="#" method="POST">
+                        <div class="row justify-content-end mb-2">
+                            <label class="form-check-label col-8"><input class="form-check-input" name="checkbox" type="checkbox">Чек-бокс 1</label>
+                            <label class="form-check-label col-8"><input class="form-check-input" name="checkbox" type="checkbox">Чек-бокс 2</label>
+                        </div>
+                        <div class="row mb-2 justify-content-end">
+                            <div class="col-8">
+                                <label class="form-check-label mr-5"><input class="form-check-input vertical-align" type="radio" name="radio">Радио-1</label>
+                                <label class="form-check-label mr-5"><input class="form-check-input vertical-align" type="radio" name="radio">Радио-2</label>
+                                <label class="form-check-label mr-5"><input class="form-check-input vertical-align" type="radio" name="radio">Радио-3</label>
+                            </div>
+                        </div>
+                        <div class="row input-group mb-2">
+                            <label class="col-4" for="input__name">Логин:</label>
+                            <input class="col-8 form-control" type="text" id="input__name" name="name" placeholder="Введите имя">
+                        </div>
+                        <div class="row input-group mb-2">
+                            <label class="col-4" for="input__password">Пароль:</label>
+                            <input class="col-8 form-control" type="password" id="input__password" name="password" placeholder="Введите пароль">
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-2">Отправить</button>
+                    </form>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <div class="navbar navbar-dark navbar-expand-md bg-dark">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="http://www.facebook.com">
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.vk.com">
+                    <i class="fab fa-vk fa-2x"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.twitter.com">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+</body>
+</html>
