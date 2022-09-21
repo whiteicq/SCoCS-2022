@@ -12,58 +12,62 @@
 <body>
 
     <header>
-        <!-- Панель навигации -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <!-- меню сайта -->
-            <a class="navbar-brand" href="#">WebLabsV06</a>
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Лб 1</a>
-                <a class="nav-item nav-link" href="#">Каталог</a>
-                <a class="nav-item nav-link" href="#">Администрирование</a>
-            </div>
-            <!-- меню сайта - конец -->
-            <!-- Информация пользователя -->
-            <a href="#" class="navbar-text ml-auto">
-                00,0 руб <i class="fas fa-shopping-cart nav-color"></i>
-            </a>
-            <div class="dropdown ml-4 nav-color">
-                <div class="dropdown-toggle" id="dropdownMenuButton"
-                     data-toggle="dropdown" aria-haspopup="true"
-                     aria-expanded="false">
-                    <img src="Images/Avatar.png" width="30"
-                         alt="User" class="rounded" />
+        <div class="container">
+            <!-- Панель навигации -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <!-- меню сайта -->
+                <a class="navbar-brand" href="#">WebLabsV06</a>
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" asp-controller="Home" asp-action="Index">Lab2</a>
+                    <a class="nav-item nav-link" asp-controller="Product" asp-action="Index">Каталог</a>
+                    <a class="nav-item nav-link" asp-area="Admin" asp-page="/Index">Администрирование</a>
                 </div>
-                <div class="dropdown-menu"
-                     aria-labelledby="dropdownMenuButton">
-                    <div class="dropdown-item-text">
-                        <img src="Images/Avatar.png" width="50"
+                <!-- меню сайта - конец -->
+                <!-- Информация пользователя -->
+                <a asp-controller="Cart" asp-action="Index" class="navbar-text ml-auto">
+                    00,0 руб <i class="fas fa-shopping-cart nav-color"></i> (0)
+                </a>
+                <div class="dropdown ml-4 nav-color">
+                    <div class="dropdown-toggle" id="dropdownMenuButton"
+                         data-toggle="dropdown" aria-haspopup="true"
+                         aria-expanded="false">
+                        <img src="Images/Avatar.png" width="30"
                              alt="User" class="rounded" />
-                        user@mail.ru
-
                     </div>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Мои товары</a>
-                    <a class="dropdown-item" href="#">Log off</a>
+                    <div class="dropdown-menu dropdown-menu-right"
+                         aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-item-text">
+                            <img src="Images/Avatar.png" width="50"
+                                 alt="User" class="rounded" />
+                            user@mail.ru
+
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" asp-controller="Product" asp-action="UserProduct">Мои товары</a>
+                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Log off</a>
+                    </div>
                 </div>
+                <!-- Информация пользователя - конец -->
+            </nav> <!-- Панель навигации - конец -->
             </div>
-            <!-- Информация пользователя - конец -->
-        </nav> <!-- Панель навигации - конец -->
     </header>
-    <main class="container">
+    <main>
         @RenderBody()
     </main>
     <footer>
-        <div class="navbar navbar-dark navbar-expand-md bg-dark">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="http://www.facebook.com">
-                    <i class="fab fa-facebook-f fa-2x"></i>
-                </a>
-                <a class="nav-item nav-link" href="http://www.vk.com">
-                    <i class="fab fa-vk fa-2x"></i>
-                </a>
-                <a class="nav-item nav-link" href="http://www.twitter.com">
-                    <i class="fab fa-twitter fa-2x"></i>
-                </a>
+        <div class="container">
+            <div class="navbar navbar-dark navbar-expand-md bg-dark">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="http://www.facebook.com">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                    <a class="nav-item nav-link" href="http://www.vk.com">
+                        <i class="fab fa-vk fa-2x"></i>
+                    </a>
+                    <a class="nav-item nav-link" href="http://www.twitter.com">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
