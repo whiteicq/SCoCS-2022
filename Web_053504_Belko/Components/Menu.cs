@@ -19,7 +19,7 @@ namespace Web_053504_Belko.Components
             new MenuItem { Controller = "Product", Action = "Index", Text = "Каталог" },
             new MenuItem { isPage = true, Area = "Admin", Page = "/Index", Text = "Администрирование" }
             };
-            return View("Menu.cshtml", _menuItems);
+            return View(_menuItems);
         }
     }
 }

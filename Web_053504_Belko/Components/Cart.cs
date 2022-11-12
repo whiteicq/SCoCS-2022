@@ -10,7 +10,7 @@ namespace Web_053504_Belko.Components
     {
         public IViewComponentResult Invoke()
         {
-            return View("Cart.cshtml");
+            return View();
         }
     }
 }
