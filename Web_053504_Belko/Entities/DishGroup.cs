@@ -9,9 +9,8 @@ namespace Web_053504_Belko.Entities
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public DishGroup(int id, string title)
+        public DishGroup(string title)
         {
-            Id = id;
             Title = title;
         }
     }

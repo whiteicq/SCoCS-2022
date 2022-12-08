@@ -13,9 +13,8 @@ namespace Web_053504_Belko.Entities
         public int GroupId { get; set; }
         public float Calories { get; set; }
         public string Image { get; set; }
-        public Dish(int id, string title, string description, float calories, string image, int groupId)
+        public Dish(string title, string description, float calories, string image, int groupId)
         {
-            Id = id;
             Title = title;
             Description = description;
             Calories = calories;
