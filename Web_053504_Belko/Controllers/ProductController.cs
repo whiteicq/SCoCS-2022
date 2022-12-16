@@ -7,19 +7,23 @@ using Web_053504_Belko.Entities;
 using Web_053504_Belko.Models;
 using Web_053504_Belko.Extensions;
 using Web_053504_Belko.Data;
+using Microsoft.Extensions.Logging;
 
 namespace Web_053504_Belko.Controllers
 {
     public class ProductController : Controller
     {
+        private ILogger _logger;
         private ApplicationDbContext _context;
         private List<Dish> dishes;
         private List<DishGroup> dishGroups;
         private int _pageSize;
-        public ProductController(ApplicationDbContext context)
+        public ProductController(ApplicationDbContext context,
+                                ILogger<ProductController> logger)
         {
             _context = context;
             _pageSize = 3;
+            _logger = logger;
             dishGroups = new List<DishGroup>
             {
                 new DishGroup("Супы"),
@@ -44,6 +48,8 @@ namespace Web_053504_Belko.Controllers
         [Route("Catalog/Page_{pageNo}")]
         public IActionResult Index(int? group, int pageNo = 1)
         {
+            _logger.LogInformation($"info: group={group}, page={pageNo}");
+
             var dishesFiltered = _context.Dishes
                                 .Where(d => !group.HasValue || d.Id == group.Value);
             ViewData["Groups"] = _context.DishGroups;
